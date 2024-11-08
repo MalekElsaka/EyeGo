@@ -8,7 +8,7 @@ const NoResults = () => {
 
       <div className="flex flex-col w-full">
         <h1 className="text-[17px] text-[#B7C5C8] font-medium mt-2">
-          Hm... we couldn't find any results for this filter
+          Hm... we couldn't find any results
         </h1>
       </div>
     </div>
