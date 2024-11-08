@@ -1,7 +1,7 @@
 export interface TaskObj {
-    header: string;
+    _id: string
+    title: string;
     description: string;
-    startDate: Date;
     dueDate: Date;
     completed: boolean;
   }
