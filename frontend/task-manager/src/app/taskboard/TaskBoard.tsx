@@ -21,7 +21,6 @@ const TaskBoard = () => {
   const taskNames =
     tasksList.length > 0 ? tasksList.map((task) => task.title) : [];
 
-  console.log(isLoading);
   return (
     <div className="h-fit overflow-hidden lg:gap-[1.1rem] sm:gap-[0.8rem] gap-0 flex bg-red lg:flex-row flex-col ">
       <TaskList
