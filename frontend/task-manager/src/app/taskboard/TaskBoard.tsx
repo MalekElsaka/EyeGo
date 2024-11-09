@@ -43,7 +43,12 @@ const TaskBoard = () => {
             <TasksFilter setTaskList={setTaskList} />
           </>
         ) : (
-          !isLoading && <NoResults />
+          !isLoading && (
+            <>
+              <NoResults />
+              <TasksFilter setTaskList={setTaskList} />
+            </>
+          )
         )}
       </div>
     </div>
