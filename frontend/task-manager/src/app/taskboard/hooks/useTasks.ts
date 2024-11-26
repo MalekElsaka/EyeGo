@@ -4,12 +4,9 @@ import { TaskObj } from "../../types";
 
 export const useTasks = () => {
   const [tasksList, setTaskList] = useState<TaskObj[]>([]);
-  const [isLoading, setIsLoading] = useState(true); 
-  const [isClient, setIsClient] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(()=>{
-    setIsClient(true);
-  },[])
+
 
   useEffect(() => {
     const getAllTasks = async () => {
@@ -21,11 +18,11 @@ export const useTasks = () => {
       } catch (error) {
         console.error("Error fetching tasks:", error);
       } finally {
-        setIsLoading(false); 
+        setIsLoading(false);
       }
     };
     getAllTasks();
   }, []);
 
-  return { tasksList, setTaskList, isLoading, isClient };
+  return { tasksList, setTaskList, isLoading };
 };

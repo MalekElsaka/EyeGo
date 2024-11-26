@@ -25,7 +25,7 @@ const TasksFilter = ({ setTaskList }: TasksFilterProps) => {
   };
 
   return (
-    <div className="h-52 gap-4 w-16 sm:mt-0 mt-[18px] flex flex-col rounded-sm bg-[#423352]">
+    <div className="h-52 gap-4 w-16 min-w-16 sm:mt-0 mt-[18px] flex flex-col rounded-sm bg-[#423352]">
       <Checkbox
         filterState={filterState}
         onFilterChange={handleFilterChange}

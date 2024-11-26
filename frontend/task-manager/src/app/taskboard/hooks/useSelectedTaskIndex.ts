@@ -13,9 +13,13 @@ export const useSelectedTaskIndex = (
   };
 
   const deleteSelectedTask = async () => {
-    setTaskList((prevTasks) =>
-      prevTasks.filter((task, index) => index !== selectedTaskIndex)
-    );
+    setTaskList((prevTasks) => {
+      
+      if (selectedTaskIndex === tasksList.length - 1) 
+        setSelectedTaskIndex(0);
+  
+      return prevTasks.filter((task, index) => index !== selectedTaskIndex);
+    });
 
     const response = await axios.delete(
       `http://localhost:4000/task/${tasksList[selectedTaskIndex]._id}`
